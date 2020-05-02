@@ -32,7 +32,7 @@ def reply():
     for tweet in tweets:
         if 'adamthebot' in tweet.text.lower():
             print(tweet.text)
-            api.update_status("@" + tweet.user.screen_name + " Stay Safe Bitch Ass Nigga! Get a life loser!", tweet.id)
+            api.update_status("@" + tweet.user.screen_name + " Stay Safe! Get a life loser!", tweet.id)
             api.create_favorite(tweet.id)
             api.retweet(tweet.id)
             store_last_seen('last_seen.txt', tweet.id)
